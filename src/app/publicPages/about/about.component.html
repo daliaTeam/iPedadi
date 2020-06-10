@@ -1,1 +1,144 @@
-<p>about works!</p>
+<!-- ------------------------------- Navbar -------------------------------- -->
+
+<app-navbar></app-navbar>
+
+<!-- ----------------------------- Fin Navbar ------------------------------ -->
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                            Componente About                             -->
+<!-- ----------------------------------------------------------------------- -->
+
+<div class="mt-5 animated fadeIn">
+
+  <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+    <div class="carousel-inner">
+      <div>
+        <img src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/pedadiA.jpg?alt=media&token=02dbac65-9e24-42fa-9dc7-e01b5bf7f4e2" class="d-block w-100 responsiveImage" alt="Instituto PEDADI">
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------------------- Historia Instituto Pedadi ---------------------- -->
+
+  <div class="container centerDiv mt-5">
+    <div>
+      <h2 class="colorPrimary ">
+        Nuestra Historia
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptatibus, omnis blanditiis accusantium tempore consequuntur quos ipsam, beatae nisi aut est aliquam reiciendis ipsa odit dicta sed ipsum eligendi natus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, id aliquam? Accusantium voluptates nemo itaque soluta repellendus, magni dolore tempore inventore, ipsum autem repellat alias exercitationem, est officia expedita officiis.
+      </p>
+    </div>
+  </div>
+
+  <div class="container centerDiv">
+    <div class="row">
+
+      <!-- ------------------------------- Mision -------------------------------- -->
+
+      <div class="col-sm-12 col-md-6">
+        <h2 class="colorSecondary">
+          Nuestra Misión
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor laborum nisi cum consectetur alias ab, dignissimos quia, exercitationem illo inventore totam quae ducimus doloribus voluptate. Architecto dicta illo necessitatibus vero!
+        </p>
+      </div>
+
+      <!-- ------------------------------- Vision -------------------------------- -->
+
+      <div class="col-sm-12 col-md-6">
+        <h2 class="colorSecondary">
+          Nuestra Visión
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta qui ducimus repellendus veritatis recusandae. Vel, maiores a. Corporis officia tempora consequuntur consequatur enim, esse, rem ratione, voluptatem velit quasi consectetur?
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+  </div>
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                            Equipo de trabajo                            -->
+  <!-- ----------------------------------------------------------------------- -->
+
+  <section id="team" class="pb-5">
+    <div class="container">
+      <h2 class="centerDiv colorPrimary">
+        Nuestro equipo de trabajo
+      </h2>
+      <div class="row">
+
+        <!-- ---------------------- Informacion de la persona ---------------------- -->
+
+        <div *ngFor="let personal of pedadiTeam" class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+
+              <!-- -------------------- Parte frontal del la tarjeta --------------------- -->
+
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                    <h4 class="card-title"> {{ personal.nombre }} </h4>
+                    <p class="card-text"> {{ personal.puesto }} </p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- --------------------- Parte trasera de la tarjeta --------------------- -->
+
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Sunlimetech</h4>
+                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank" href="#">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                          Fin Equipo de trabajo                          -->
+  <!-- ----------------------------------------------------------------------- -->
+
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                        Termina componente About                         -->
+<!-- ----------------------------------------------------------------------- -->

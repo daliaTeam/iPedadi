@@ -1,0 +1,15 @@
+nav.navbar {
+    background-color: #ffffff !important;
+}
+
+.navText {
+    color: #000000 !important;
+}
+
+.navTextActive {
+    color: #8FBC23 !important;
+}
+
+.navBrand {
+    color: #000000 !important;
+}

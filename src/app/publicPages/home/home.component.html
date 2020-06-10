@@ -1,1 +1,118 @@
-<p>home works!</p>
+<!-- ------------------------------- Navbar -------------------------------- -->
+
+<app-navbar></app-navbar>
+
+<!-- ----------------------------- Fin Navbar ------------------------------ -->
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                             Componente Home                             -->
+<!-- ----------------------------------------------------------------------- -->
+
+<div class="mt-5 animated fadeInUp">
+  <!-- Carrusel-->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div *ngFor="let element of elements" [class]="element.clase">
+        <img [src]="element.link" class="d-block w-100 responsiveImage" alt="Instituto PEDADI">
+        <div class="carousel-caption d-none d-md-block">
+          <h5> {{element.titulo}} </h5>
+          <p> {{element.subtitulo}} </p>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- Que ofrecemos -->
+  <div class="container mt-5 ">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 ">
+        <h3>
+          Que te ofrecemos.
+        </h3>
+        <p>
+          En el instituto PEDADI creamos para tus peques un modelo innovador que suma a la educacion preescolar de la SEP.
+        </p>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="row mt-3" *ngFor="let beneficios of benefit">
+              <div class="col-2 mt-1">
+                <i [class]='beneficios.icono'></i>
+              </div>
+              <div class="col-10">
+                <h5> {{beneficios.beneficio}} </h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="row mt-3" *ngFor="let beneficios of bennefit">
+              <div class="col-2 mt-1">
+                <i [class]='beneficios.icono'></i>
+              </div>
+              <div class="col-10">
+                <h5> {{beneficios.beneficio}} </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12  offset-md-1 col-md-5 leftDiv ">
+        <img class="responsiveCartel" src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/cartelInscripciones.jpg?alt=media&token=1b1c3ebd-d44c-4d69-b7a0-8b755a51b1ac">
+      </div>
+    </div>
+  </div>
+
+  <!-- niveles educativos -->
+  <div class="text-center mt-5">
+    <h1 class="colorPrimary">Nuestros <span class="colorSecondary"> niveles educativos</span>
+    </h1>
+  </div>
+
+  <body>
+    <div class="card" *ngFor="let niveles of nivelesEducativos">
+      <img [src]="niveles.imagen" alt="vitateach" />
+      <div class="card-body">
+        <h6> {{niveles.titulo}} </h6>
+        <p> {{niveles.descripcion}} </p>
+        <div>
+          <a [href]="niveles.link">Ir al sitio</a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <div class="text-center mt-5">
+    <h1 class="colorPrimary">Nuestras <span class="colorSecondary"> alianzas</span>
+    </h1>
+  </div>
+
+  <body>
+    <div class="card" *ngFor="let alianza of alianzas">
+      <img [src]="alianza.imagen" alt="vitateach" />
+      <div class="card-body">
+        <h6> {{alianza.titulo}} </h6>
+        <p> {{alianza.descripcion}} </p>
+        <div>
+          <a [href]="alianza.link">Ir al sitio</a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                           Fin Componente Home                           -->
+<!-- ----------------------------------------------------------------------- -->
