@@ -2,12 +2,15 @@
 <!--                                 Navbar                                  -->
 <!-- ----------------------------------------------------------------------- -->
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-lg" [ngClass]=" { 'navbar-dark bg-azulPedadi': colorNav, 'navbar-light bg-claroPedadi':!colorNav } " (scroll)="onScrollEvent($event)">
   <div class="container d-flex align-items-center">
 
     <!-- --------------------- Elementos de lado izquierdo --------------------- -->
 
-    <a class="navbar-brand navBrand" [routerLink]="['/home']"><strong>Instituto PEDADI</strong> </a>
+    <a class="navbar-brand navBrand" [routerLink]="['/home']">
+      <img src="assets/images/navbar/logo.png" width="30" height="30" class="d-inline-block align-top mr-2" alt="" loading="lazy">
+      <strong [ngClass]=" { 'navTextTop': colorNav, 'navText':!colorNav } ">Instituto PEDADI</strong>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navText">Menu</span> 
     </button>
@@ -16,11 +19,13 @@
 
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav ml-auto navText2">
-        <li class="nav-item" *ngFor="let element of elements"><a [routerLink]="[element.link]" routerLinkActive="navTextActive" routerLinkActiveOptions="{exact:true}" class="nav-link pl-0 navText"> {{element.nombre}} </a></li>
+        <li class="nav-item" *ngFor="let element of elements"><a [routerLink]="[element.link]" routerLinkActive="navTextActive" routerLinkActiveOptions="{exact:true}" class="nav-link pl-0" [ngClass]=" { 'navTextTop': colorNav, 'navText':!colorNav } "> {{element.nombre}} </a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+
 
 <!-- ----------------------------------------------------------------------- -->
 <!--                               Fin Navbar                                -->

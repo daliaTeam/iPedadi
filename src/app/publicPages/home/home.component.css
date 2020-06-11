@@ -8,14 +8,6 @@
     max-width: 400px;
 }
 
-.colorPrimary {
-    color: #01478C !important;
-}
-
-.colorSecondary {
-    color: #8FBC23 !important;
-}
-
 
 /* estilo div izquierdo */
 
@@ -74,7 +66,7 @@ body {
 .card .card-body h6 {
     margin: .5rem 0;
     font-size: .85rem;
-    color: #fda638;
+    color: #8FBC23;
     letter-spacing: 3px;
 }
 
@@ -92,7 +84,7 @@ body {
 .card .card-body div a {
     position: relative;
     text-decoration: none;
-    color: #526ffd;
+    color: #01478C;
     padding: .5rem;
     text-align: center;
     z-index: 999;
@@ -104,7 +96,7 @@ body {
     content: '';
     width: 13px;
     height: 13px;
-    background: #526ffd;
+    background: #01478C;
     border-radius: 300px;
     left: -13px;
     top: 3px;

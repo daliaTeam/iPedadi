@@ -9,7 +9,9 @@
 <!-- ----------------------------------------------------------------------- -->
 
 <div class="mt-5 animated fadeInUp">
-  <!-- Carrusel-->
+
+  <!-- ------------------------------ Carrusel ------------------------------- -->
+
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -35,24 +37,35 @@
       </a>
     </div>
   </div>
-  <!-- Que ofrecemos -->
+
+  <!-- ---------------------------- Que ofrecemos ---------------------------- -->
+
+
+
   <div class="container mt-5 ">
     <div class="row">
       <div class="col-sm-12 col-md-6 ">
-        <h3>
+
+        <div class="text-center">
+          <h1 class="colorPrimary">¿Que te <span class="colorSecondary">ofrecemos?</span></h1>
+          <p>
+            En el instituto PEDADI creamos para tus peques un modelo innovador que suma a la educacion preescolar de la SEP.
+          </p>
+        </div>
+        <!-- <h3>
           Que te ofrecemos.
         </h3>
         <p>
           En el instituto PEDADI creamos para tus peques un modelo innovador que suma a la educacion preescolar de la SEP.
-        </p>
+        </p> -->
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="row mt-3" *ngFor="let beneficios of benefit">
-              <div class="col-2 mt-1">
+              <div class="col-2">
                 <i [class]='beneficios.icono'></i>
               </div>
               <div class="col-10">
-                <h5> {{beneficios.beneficio}} </h5>
+                <h5 class="mt-1"> {{beneficios.beneficio}} </h5>
               </div>
             </div>
           </div>
@@ -62,7 +75,7 @@
                 <i [class]='beneficios.icono'></i>
               </div>
               <div class="col-10">
-                <h5> {{beneficios.beneficio}} </h5>
+                <h5 class="mt-1"> {{beneficios.beneficio}} </h5>
               </div>
             </div>
           </div>
@@ -74,7 +87,8 @@
     </div>
   </div>
 
-  <!-- niveles educativos -->
+  <!-- ------------------------- Niveles educativos -------------------------- -->
+
   <div class="text-center mt-5">
     <h1 class="colorPrimary">Nuestros <span class="colorSecondary"> niveles educativos</span>
     </h1>
@@ -115,4 +129,14 @@
 
 <!-- ----------------------------------------------------------------------- -->
 <!--                           Fin Componente Home                           -->
+<!-- ----------------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 Fotter                                  -->
+<!-- ----------------------------------------------------------------------- -->
+
+<app-footer></app-footer>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                               Fin Footer                                -->
 <!-- ----------------------------------------------------------------------- -->

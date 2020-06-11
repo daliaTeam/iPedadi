@@ -1,9 +1,13 @@
-nav.navbar {
+/* nav.navbar {
     background-color: #ffffff !important;
-}
+} */
 
 .navText {
     color: #000000 !important;
+}
+
+.navTextTop {
+    color: #ffffff !important;
 }
 
 .navTextActive {
@@ -12,4 +16,8 @@ nav.navbar {
 
 .navBrand {
     color: #000000 !important;
+}
+
+.navbarTop {
+    color: #01478C !important;
 }
