@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+.colorPrimary {
+    color: #01478C !important;
+}
+
+.colorSecondary {
+    color: #8FBC23 !important;
+}
+
+.colorLight {
+    color: #FFFFFF !important;
+}

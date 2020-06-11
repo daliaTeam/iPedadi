@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TeamPedadi, AboutService } from '../../publicServices/about.service';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  pedadiTeam: TeamPedadi[];
+
+  constructor( private aboutService: AboutService) {
+    this.pedadiTeam = aboutService.getTeamPedadi();
+   }
 
   ngOnInit(): void {
   }

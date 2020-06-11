@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { NavbarElement, NavbarService } from '../../publicServices/navbar.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
+/* ----------------- Control del cambio de color del navbar ----------------- */
+  @HostListener('window:scroll', ['$event']) 
+  onScrollEvent($event){
+    this.colorNav = window.pageYOffset > 590 ? true : false
+  }  
+    
+  elements: NavbarElement[];
+  colorNav=false;
+  
+  constructor(private navbarService: NavbarService) { 
+    this.elements = navbarService.getNavbarElements();
+  }
+  
   ngOnInit(): void {
   }
+  
 
 }
