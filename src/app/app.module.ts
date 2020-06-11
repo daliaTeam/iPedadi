@@ -21,6 +21,10 @@ import { AboutComponent } from './publicPages/about/about.component';
 
 import { APP_ROUTES } from './app.routes';
 import { PagesComponent } from './pages/pages.component';
+import { EducativeModelComponent } from './publicPages/educative-model/educative-model.component';
+import { EducativeOfferComponent } from './publicPages/educative-offer/educative-offer.component';
+import { GalleryComponent } from './publicPages/gallery/gallery.component';
+import { ContactComponent } from './publicPages/contact/contact.component';
 
 
 @NgModule({
@@ -38,7 +42,11 @@ import { PagesComponent } from './pages/pages.component';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    PagesComponent
+    PagesComponent,
+    EducativeModelComponent,
+    EducativeOfferComponent,
+    GalleryComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
