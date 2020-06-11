@@ -7,39 +7,49 @@ export class FooterService {
 
  private refer: Referencias[] = [
 {
-  icono: 'fas fa-map-marked-alt',
+  icono: 'fa fa-map-marker',
   descripcion: 'Corpus Cristi 606, Universidad, El Arenal, Agencia de Policia de Cinco Señores, 68126 Oaxaca de Juárez, Oax'
 },
 {
-  icono: 'fas fa-phone',
+  icono: 'fa fa-phone',
   descripcion: '951 277 0113'
 },
 {
-  icono: 'fas fa-phone',
+  icono: 'fa fa-phone',
   descripcion: '951 277 0113'
 },
 {
-  icono: 'fas fa-envelope',
-  descripcion: 'intituto_pedadi@outlook.es'
+  icono: 'fa fa-envelope',
+  descripcion: 'instituto_pedadi@outlook.es'
 }
   ];
 
   private redSocial: RedSocial[] = [
     {
-      icono: 'fab fa-facebook fa-2x',
-      link: 'https://www.facebook.com'
+      icono: 'fa fa-facebook-f',
+      link: 'https://www.facebook.com',
+      animacion: 'social-button facebook mr-2'
+      
     },
     {
-      icono: 'fab fa-twitter fa-2x',
-      link: 'https://www.twitter.com'
+      icono: 'fa fa-twitter',
+      link: 'https://www.twitter.com',
+      animacion: 'social-button twitter mr-2'
     },
     {
-      icono: 'fab fa-instagram fa-2x',
-      link: 'https://www.instagram.com'
+      icono: 'fa fa-linkedin',
+      link: 'https://www.linkedin.com/',
+      animacion: 'social-button linkedin mr-2'
     },
     {
-      icono: 'fab fa-youtube fa-2x',
-      link: 'https://www.youtube.com'
+      icono: 'fa fa-youtube',
+      link: 'https://www.instagram.com',
+      animacion: 'social-button youtube mr-2'
+    },
+    {
+      icono: 'fa fa-instagram',
+      link: 'https://www.youtube.com',
+      animacion: 'social-button instagram mr-2'
     },
   ];
 
@@ -58,4 +68,5 @@ export interface Referencias {
 export interface RedSocial {
   icono: string;
   link: string;
+  animacion: string;
 }

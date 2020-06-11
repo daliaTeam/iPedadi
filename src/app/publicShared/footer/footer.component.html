@@ -7,29 +7,38 @@
 
       <!-- ---------------------------- icono pedadi ----------------------------- -->
 
-      <div class="col-md-4 col-sm-12">
+      <div class="col-md-4 col-sm-12 mt-3">
         <p class="colorLight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eius alias ullam maiores! Minima dolore consectetur accusamus doloribus dignissimos provident magni pariatur veniam, sint saepe eaque facilis sunt magnam fugiat.</p>
       </div>
 
       <!-- -------------------------- Links de paginas --------------------------- -->
 
-      <div class="col-md-4 col-sm-12">
-        <p class="colorLight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consectetur velit laboriosam dolores est mollitia aliquid, excepturi necessitatibus consequuntur perferendis officiis tempora unde voluptates consequatur deserunt, quo dolorem optio
-          cupiditate.
-        </p>
+      <div class="col-md-4 col-sm-12 mt-3">
+        <h3 class="colorSecondary">Links</h3>
+        <div class="colorLight">
+          <ul>
+            <li *ngFor="let pagina of paginas">
+              <!-- <a [href]="pagina.link" class="hov"> {{ pagina.nombre }} </a> -->
+              <a [routerLink]="[pagina.link]" routerLinkActive="navTextActive" routerLinkActiveOptions="{exact:true}" class="nav-link pl-0 colorLight"> {{ pagina.nombre}} </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- ----------------------------- ubicaciones ----------------------------- -->
 
-      <div class="col-md-4 col-sm-12">
-        <p class="colorLight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus placeat iusto, aspernatur tempore dicta quidem ab atque, in architecto impedit omnis laborum quisquam quo recusandae blanditiis modi. Cupiditate, unde eius!</p>
+      <div class="col-md-4 col-sm-12 mt-3">
+        <h3 class="colorSecondary">Ubícanos</h3>
+        <div class="col-12" *ngFor="let referencia of referencias">
+          <p class="colorLight"><i [class]='referencia.icono'></i> &nbsp; {{referencia.descripcion}} </p>
+        </div>
       </div>
     </div>
 
   </div>
   <!-- --------------------------- Redes Sociales ---------------------------- -->
 
-  <div class="row">
+  <div class="row mt-2">
     <div class="col text-center">
       <h2 class="colorSecondary">Siguenos en nuestras <span class="colorLight">redes sociales</span></h2>
     </div>
@@ -37,11 +46,7 @@
   <div>
     <footer mb-5>
       <div class="rounded-social-buttons">
-        <a class="social-button facebook mr-2" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a>
-        <a class="social-button twitter mr-2" href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a class="social-button linkedin mr-2" href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <a class="social-button youtube mr-2" href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a>
-        <a class="social-button instagram mr-2" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a *ngFor="let redSocial of RedSocial" [class]='redSocial.animacion' [href]='redSocial.link' target="_blank"><i [class]='redSocial.icono'></i></a>
       </div>
     </footer>
     <br>
